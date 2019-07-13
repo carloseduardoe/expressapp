@@ -1,7 +1,7 @@
 import express from 'express';
 import toDoController from './controllers/ToDoController';
 
-const router = express.router();
+const router = express.Router();
 
 // ToDo BREAD
 router.route("/todo")
