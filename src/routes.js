@@ -1,25 +1,21 @@
-const express = require('express'),
-      toDoController = require('./controllers/ToDoController');
+import express from 'express';
+import toDoController from './controllers/ToDoController';
 
-const router = express.Router();
+const router = express.router();
 
-// BROWSE
+// ToDo BREAD
 router.route("/todo")
       .get(toDoController.browse);
 
-// READ
 router.route("/todo/:id")
       .get(toDoController.read);
-
-// EDIT
+      
 router.route("/todo/:id")
       .put(toDoController.edit);
-
-// ADD
+      
 router.route("/todo")
       .post(toDoController.add);
-
-// DELETE
+      
 router.route("/todo/:id")
       .delete(toDoController.delete);
 
